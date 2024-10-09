@@ -1,3 +1,10 @@
+/*
+   Name: Jillian Berry
+   Class Name: CPSC 322 - Web Development
+   Assignment Name: Homeowrk 5
+   Last Modified: 10/9/2024
+  
+*/
 // List of additional artworks to add dynamically
         
 let timeClicked = 0;
@@ -16,7 +23,7 @@ const newArtworks = [
     { title: 'Starry Night Over the Rhône', artist: 'Vincent van Gogh', img: 'https://via.placeholder.com/200' }
 ];
 
-
+//adding event listeners to the first three listeners
 document.getElementById("art1").addEventListener('click', function (e) {
             timeClicked++;
             document.getElementById("art1").style.backgroundColor = 'lightgreen';
@@ -34,19 +41,9 @@ document.getElementById("art3").addEventListener('click', function (e) {
             document.getElementsByClassName("art-panel")[2].style.backgroundColor = 'lightgreen';
             document.getElementById("counter").textContent = "Artworks Viewed:" + timeClicked;
 });
- 
-const container = document.getElementById('art-grid');
-container.addEventListener('click', function (e) {
-    // But only alert for elements that have an alert-button class
-    if (e.target.classList.contains('alert-panel')) {
-        console.log("Hello");
-        timeClicked++;
-        e.target.backgroundColor = 'lightgreen';
-        document.getElementById("counter").textContent = "Artworks Viewed:" + timeClicked;
-    }
-});
 
-    
+
+//event listeners for the add-art-button
 document.getElementById("add-art-button").addEventListener('click', function (e) {
     let colorList = document.querySelector(".art-grid");
     firstart = newArtworks[index]
@@ -56,10 +53,6 @@ document.getElementById("add-art-button").addEventListener('click', function (e)
     const newParagraph = document.createElement("p");
     const image = document.createElement("img");
     image.setAttribute("src", firstart.img);
-    
-
-
-    
     
     newParagraph.textContent = firstart.title + " by " + firstart.artist; 
     let container = document.querySelector(".art-grid");
@@ -72,13 +65,13 @@ document.getElementById("add-art-button").addEventListener('click', function (e)
     
     index = index + 1;
 
-    setListener( myDiv );
+    setListener(myDiv);
     
 
 });
 
 
-
+//adds the listeners to the new Div
 function setListener( el ) {
     // Dynamic elements event listener
     el.addEventListener( 'click', function() {
@@ -89,7 +82,7 @@ function setListener( el ) {
 }
 
     
-
+    //adds the reset button
     document.getElementById("reset-button").addEventListener('click', function (e) { 
         timeClicked = 0;
         document.getElementById("counter").textContent = "Artworks Viewed: " + timeClicked;
