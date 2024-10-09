@@ -39,7 +39,7 @@ document.getElementById("art2").addEventListener('click', function (e) {
 document.getElementById("art3").addEventListener('click', function (e) {
             timeClicked++;
             document.getElementsByClassName("art-panel")[2].style.backgroundColor = 'lightgreen';
-            document.getElementById("counter").textContent = "Artworks Viewed:" + timeClicked;
+            document.getElementById("counter").textContent = "Artworks Viewed: " + timeClicked;
 });
 
 
