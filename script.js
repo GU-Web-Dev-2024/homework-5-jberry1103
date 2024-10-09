@@ -56,10 +56,7 @@ document.getElementById("add-art-button").addEventListener('click', function (e)
     const newParagraph = document.createElement("p");
     const image = document.createElement("img");
     image.setAttribute("src", firstart.img);
-    image.setAttribute("height", "200");
-    image.setAttribute("width", "200");
-    newParagraph.setAttribute("font-size", "1.1rem");
-    newParagraph.setAttribute("font-weight", "bold");
+    
 
 
     
